@@ -3,6 +3,16 @@
 	"EngineAssociation": "4.25",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "CryAndRun",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "Substance",
