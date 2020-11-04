@@ -15,9 +15,20 @@ public:
 	// Sets default values for this character's properties
 	APlayerCharacter();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Character Movement: Walking")
+		float SprintSpeedMulti;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	void MoveForward(float Value);  // avant / arriere
+	void MoveRight(float Value);  // droite / gauche
+	void Turn(float Value);   
+	void LookUp(float Value);
+
+	void Sprint(); 
+	void Walk();
 
 public:	
 	// Called every frame
