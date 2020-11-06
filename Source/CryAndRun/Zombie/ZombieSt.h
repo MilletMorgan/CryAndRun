@@ -4,17 +4,26 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "ZombieSt.generated.h"
+
+
 
 UCLASS()
 class CRYANDRUN_API AZombieSt : public ACharacter
 {
 	GENERATED_BODY()
 
+
 public:
 	// Sets default values for this character's properties
 	AZombieSt();
-
+private:
+	int MaxWalkSpeed = 800;
+	//UPROPERTY(EditAnywere)
+	//primary state value
+	float lifePoint = 100.0;
+	float damage = 25.0;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
