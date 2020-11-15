@@ -3,28 +3,23 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
-#include "GameFramework/CharacterMovementComponent.h"
-#include "ZombieSt.generated.h"
-
-
-
+#include "GameFramework/Pawn.h"
+#include "GameFramework/PawnMovementComponent.h"
+#include "Zombie.generated.h"
 
 UCLASS()
-class CRYANDRUN_API AZombieSt : public ACharacter
+class CRYANDRUN_API AZombie : public APawn
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
-	AZombieSt();
-private:
-	float walkSpeed = 75.0
-	float lifePoint = 100.0;
-	float damage = 25.0;
+	// Sets default values for this pawn's properties
+	AZombie();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
 
 public:	
 	// Called every frame
