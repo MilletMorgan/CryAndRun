@@ -30,6 +30,7 @@ void AZombieSt::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	
 }
 
 // Called every frame

@@ -19,7 +19,7 @@ public:
 	// Sets default values for this character's properties
 	AZombieSt();
 private:
-	float walkSpeed = 75.0
+	float walkSpeed = 75.0;
 	float lifePoint = 100.0;
 	float damage = 25.0;
 protected:
