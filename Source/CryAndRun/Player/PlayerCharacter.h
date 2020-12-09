@@ -4,7 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Components/CapsuleComponent.h"
 #include "PlayerCharacter.generated.h"
+
+
+
 
 UCLASS()
 class CRYANDRUN_API APlayerCharacter : public ACharacter
@@ -14,9 +18,12 @@ class CRYANDRUN_API APlayerCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	APlayerCharacter();
-
+	
+	// Vitesse sprint
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Character Movement: Walking")
 		float SprintSpeedMulti;
+
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,8 +34,12 @@ protected:
 	void Turn(float Value);   
 	void LookUp(float Value);
 
-	void Sprint(); 
-	void Walk();
+	void Sprint(); // Sprint
+	void Walk();  // StopSprint
+
+	void StartCrouch();
+	void StopCrouch();
+
 
 public:	
 	// Called every frame
@@ -36,5 +47,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
 
 };
