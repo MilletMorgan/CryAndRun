@@ -20,8 +20,11 @@ public:
 	APlayerCharacter();
 	
 	// Vitesse sprint
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Character Movement: Walking")
-		float SprintSpeedMulti;
+	UPROPERTY(EditAnywhere)
+		float SprintSpeed;
+	// Vitesse de marche
+	UPROPERTY(EditAnywhere)
+		float WalkSpeed;
 
 
 

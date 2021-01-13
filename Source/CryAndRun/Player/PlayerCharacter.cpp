@@ -14,7 +14,8 @@ APlayerCharacter::APlayerCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	SprintSpeedMulti = 1.7f;
+	SprintSpeed = 1000.0f;
+	WalkSpeed = 600.0f;
 
 }
 
@@ -100,13 +101,13 @@ void APlayerCharacter::MoveRight(float Value)
 // Fonction qui permet le sprint
 void APlayerCharacter::Sprint()
 {
-	GetCharacterMovement()->MaxWalkSpeed *= SprintSpeedMulti;
+	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed ;
 }
 
 // Fonction qui permet la marche 
 void APlayerCharacter::Walk()
 {
-	GetCharacterMovement()->MaxWalkSpeed /= SprintSpeedMulti;
+	GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }
 
 // Fonction pour s'accroupir
