@@ -113,8 +113,11 @@ void APlayerCharacter::Walk()
 // Fonction pour s'accroupir
 void APlayerCharacter::StartCrouch()
 {
+	// GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, TEXT("Crouch before if."));
+
 	if (!GetCharacterMovement()->IsCrouching())
 	{
+		// GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, TEXT("Crouch in if."));
 		GetCharacterMovement()->bWantsToCrouch = true;
 		GetCharacterMovement()->Crouch();
 	}
