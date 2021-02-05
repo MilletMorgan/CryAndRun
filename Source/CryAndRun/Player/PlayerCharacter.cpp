@@ -28,7 +28,7 @@ void APlayerCharacter::BeginPlay()
 
 	// Display a debug message for three seconds. 
 	// The -1 "Key" value argument prevents the message from being updated or refreshed.
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, TEXT("Using PlayerCharacter."));
+	
 	 
 }
 
